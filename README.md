@@ -1,6 +1,8 @@
 # Setup-Kali-Linux-Machine
 
 Script to install essentials packages to Kali Linux Machine
+
+Usage:
 ```sh
 cd Setup-Kali-Linux-Machine
 chmod +x setupKaliMachine.sh
@@ -8,7 +10,7 @@ sudo setupKaliMachine.sh
 ```
 
 
-packages:
+Packages:
 - gobuster
 - seclists
 - tor
