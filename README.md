@@ -18,8 +18,8 @@ Packages:
 - snmp-mibs-downloader
 - mingw-w64
 - wine
-- gdb
-- edb-debugger
-- imhex
-- pipx
+- gdb (Low Level Decoder with Interface - Command Line)
+- edb-debugger (Low Level Decoder with Interface)
+- imhex (Hex Editor)
+- pipx (To install and run python aplications)
 - NetExec (New CrackMapExec)
