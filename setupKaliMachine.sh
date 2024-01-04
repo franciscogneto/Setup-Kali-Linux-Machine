@@ -33,9 +33,27 @@ apt install -y proxychains;
 echo -e "${BLUE} ============== Service Enumeration Step ============== \n - snmp-mibs-downloader ${WHITE}"
 apt install -y snmp-mibs-downloader;
 
+echo -e "${BLUE} ============= Adding Architecture x86 ============== \n - wine \n - mingw-w64 ${WHITE}"
+dpkg --add-architecture i386 && apt update;
+
 
 echo -e "${BLUE} ============= Windows auxiliary Tools Step ============== \n - wine \n - mingw-w64 ${WHITE}"
-apt install -y mingw-w64 wine;
+apt install -y wine32:i386;
+apt install -y wine32;
+apt install -y libwine mingw-w64 wine winetricks;
+
+echo -e "${BLUE} ============= Openssl & Openssl dev  ============== \n - gdb \n - edb-debugger \n - strace \n - ltrace ${WHITE}"
+apt install openssl libssl-dev;
+
+
+echo -e "${BLUE} ============= Python3 Auxiliary packages  ============== \n - gdb \n - edb-debugger \n - strace \n - ltrace ${WHITE}"
+pip3 install setuptools;
+pip3 install pyftpdlib;
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py;
+python2 get-pip.py;
+rm get-pip.py;
+
+
 
 
 echo -e "${BLUE} ============= Binary Analysis Tools Step ============== \n - gdb \n - edb-debugger \n - strace \n - ltrace ${WHITE}"
