@@ -18,6 +18,10 @@ Packages:
 - snmp-mibs-downloader
 - mingw-w64
 - wine
+- wine32
+- wine packages
+- openssl
+- python2.7
 - gdb (Low Level Decoder with Interface - Command Line)
 - edb-debugger (Low Level Decoder with Interface)
 - imhex (Hex Editor)
