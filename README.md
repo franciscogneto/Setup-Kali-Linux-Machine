@@ -16,6 +16,7 @@ Packages:
 - tor
 - proxychains
 - snmp-mibs-downloader
+- gcc-multilib
 - mingw-w64
 - wine
 - wine32
