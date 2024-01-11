@@ -36,6 +36,8 @@ apt install -y snmp-mibs-downloader;
 echo -e "${BLUE} ============= Adding Architecture x86 ============== \n - wine \n - mingw-w64 ${WHITE}"
 dpkg --add-architecture i386 && apt update;
 
+echo -e "${BLUE} ============= Auxiliary Libs for cross-compiling (to architecture x86) ============ \n - gcc-multilib ${WHITE}"
+apt install gcc-multilib
 
 echo -e "${BLUE} ============= Windows auxiliary Tools Step ============== \n - wine \n - mingw-w64 ${WHITE}"
 apt install -y wine32:i386;
