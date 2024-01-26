@@ -11,8 +11,10 @@ echo -e "\n${RED} Don't forget to run with SUDO\n\n"
 
 
 echo -e "${BLUE} ======================= Updating... ==============\n ${WHITE}"
-apt update;
-apt upgrade;
+apt update -y;
+apt update -y --fix-missing;
+apt upgrade -y;
+apt upgrade -y --fix-missing;
 
 echo -e "${BLUE} ============== VirtualBox Guest Additions ==============\n ${WHITE}"
 apt install -y virtualbox-guest-x11
@@ -40,7 +42,7 @@ echo -e "${BLUE} ============= Adding Architecture x86 ============== \n - wine 
 dpkg --add-architecture i386 && apt update;
 
 echo -e "${BLUE} ============= Auxiliary Libs for cross-compiling (to architecture x86) ============ \n - gcc-multilib ${WHITE}"
-apt install gcc-multilib
+apt install -y gcc-multilib
 
 echo -e "${BLUE} ============= Windows auxiliary Tools Step ============== \n - wine \n - mingw-w64 ${WHITE}"
 apt install -y wine32:i386;
@@ -48,7 +50,7 @@ apt install -y wine32;
 apt install -y libwine mingw-w64 wine winetricks;
 
 echo -e "${BLUE} ============= Openssl & Openssl dev  ============== \n - gdb \n - edb-debugger \n - strace \n - ltrace ${WHITE}"
-apt install openssl libssl-dev;
+apt install -y openssl libssl-dev;
 
 
 echo -e "${BLUE} ============= Python3 Auxiliary packages  ============== \n - gdb \n - edb-debugger \n - strace \n - ltrace ${WHITE}"
@@ -70,7 +72,7 @@ apt install -y imhex;
 
 
 echo -e "${BLUE} ==================== NetExec (the new crackmapexec) ============== \n - netexec ${WHITE}"
-apt install pipx git;
+apt install -y pipx git;
 pipx ensurepath;
 pipx install git+https://github.com/Pennyw0rth/NetExec;
 pipx ensurepath;
