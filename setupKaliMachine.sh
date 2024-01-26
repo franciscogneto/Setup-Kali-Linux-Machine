@@ -14,6 +14,9 @@ echo -e "${BLUE} ======================= Updating... ==============\n ${WHITE}"
 apt update;
 apt upgrade;
 
+echo -e "${BLUE} ============== VirtualBox Guest Additions ==============\n ${WHITE}"
+apt install -y virtualbox-guest-x11
+
 echo -e "${BLUE} ======================= Web Step ============== \n - gobuster ${WHITE}"
 apt install gobuster;
 
