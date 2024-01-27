@@ -15,6 +15,7 @@ apt update -y;
 apt update -y --fix-missing;
 apt upgrade -y;
 apt upgrade -y --fix-missing;
+apt upgrade --fix-broken;
 
 echo -e "${BLUE} ============== VirtualBox Guest Additions ==============\n ${WHITE}"
 apt install -y virtualbox-guest-x11

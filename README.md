@@ -28,3 +28,4 @@ Packages:
 - imhex (Hex Editor)
 - pipx (To install and run python aplications)
 - NetExec (New CrackMapExec)
+- VirtualBox Guest Additions
