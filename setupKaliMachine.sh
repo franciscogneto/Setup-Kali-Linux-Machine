@@ -39,7 +39,7 @@ apt install -y proxychains;
 echo -e "${BLUE} ============== Service Enumeration Step ============== \n - snmp-mibs-downloader ${WHITE}"
 apt install -y snmp-mibs-downloader;
 
-echo -e "${BLUE} ============= Adding Architecture x86 ============== \n - wine \n - mingw-w64 ${WHITE}"
+echo -e "${BLUE} ============= Adding Architecture x86 ============== \n ${WHITE}"
 dpkg --add-architecture i386 && apt update;
 
 echo -e "${BLUE} ============= Auxiliary Libs for cross-compiling (to architecture x86) ============ \n - gcc-multilib ${WHITE}"
@@ -50,18 +50,25 @@ apt install -y wine32:i386;
 apt install -y wine32;
 apt install -y libwine mingw-w64 wine winetricks;
 
-echo -e "${BLUE} ============= Openssl & Openssl dev  ============== \n - gdb \n - edb-debugger \n - strace \n - ltrace ${WHITE}"
+echo -e "${BLUE} ============= Openssl & Openssl dev  ============== \n ${WHITE}"
 apt install -y openssl libssl-dev;
 
 
-echo -e "${BLUE} ============= Python3 Auxiliary packages  ============== \n - gdb \n - edb-debugger \n - strace \n - ltrace ${WHITE}"
+echo -e "${BLUE} ============= Python3 Auxiliary packages  ============== \n ${WHITE}"
 pip3 install setuptools;
 pip3 install pyftpdlib;
+
+
+echo -e "${BLUE} ============= Python2 Auxiliary packages  ============== \n${WHITE}"
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py;
 python2 get-pip.py;
 rm get-pip.py;
-
-
+pip2 install --upgrade setuptools;
+#
+# Impacket now require dsinternals, since dsinternals is a library from 2021, 
+# we can search a impacket version older than dsinternals and instal it. Remember to do it with python 2
+#https://stackoverflow.com/questions/76407565/error-package-dsinternals-requires-a-different-python-2-7-18-not-in-3-4
+pip2 install impacket==0.9.22
 
 
 echo -e "${BLUE} ============= Binary Analysis Tools Step ============== \n - gdb \n - edb-debugger \n - strace \n - ltrace ${WHITE}"
