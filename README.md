@@ -29,3 +29,4 @@ Packages:
 - pipx (To install and run python aplications)
 - NetExec (New CrackMapExec)
 - VirtualBox Guest Additions
+- impacket for python2 (necessary to execute some exploits)
