@@ -30,3 +30,5 @@ Packages:
 - NetExec (New CrackMapExec)
 - VirtualBox Guest Additions
 - impacket for python2 (necessary to execute some exploits)
+- Chisel
+
