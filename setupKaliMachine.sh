@@ -85,6 +85,7 @@ pipx ensurepath;
 pipx install git+https://github.com/Pennyw0rth/NetExec;
 pipx ensurepath;
 
+
 echo -e "${BLUE} ==================== Chisel - Tunneling Tool + binaries in /usr/share/chisel ============== \n - chisel ${WHITE}"
 apt install -y chisel;
 mkdir /usr/share/chisel;
@@ -93,6 +94,9 @@ wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_li
 wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_windows_amd64.gz -O /usr/share/chisel/chisel_windows_x64.gz;
 wget https://github.com/jpillora/chisel/releases/download/v1.9.1/chisel_1.9.1_windows_386.gz -O /usr/share/chisel/chisel_windows_x86.gz;
 
+echo -e "${BLUE} ==================== Golang + gccgo ============== \n - golang, gccgo ${WHITE}"
+apt install -y golang-go;
+apt install -y gccgo-go;
 
 echo -e "${BLUE} ============= Update Step ============== \n - metasploit \n - searchsploit \n - locate ${WHITE}"
 apt install -y metasploit-framework;
