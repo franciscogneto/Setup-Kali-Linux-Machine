@@ -33,4 +33,5 @@ Packages:
 - Chisel
 - Golang
 - gccGo
+- Ngrok
 
