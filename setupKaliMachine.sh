@@ -20,9 +20,9 @@ apt upgrade --fix-broken;
 echo -e "${BLUE} ============== VirtualBox Guest Additions ==============\n ${WHITE}"
 apt install -y virtualbox-guest-x11
 
-echo -e "${BLUE} ======================= Web Step ============== \n - gobuster ${WHITE}"
+echo -e "${BLUE} ======================= Web Step ============== \n - gobuster \n - feroxbuster ${WHITE}"
 apt install gobuster;
-
+apt install -y feroxbuster;
 
 echo -e "${BLUE} ==================== Wordlist Step ============== \n - seclists ${WHITE}"
 apt install -y seclists;

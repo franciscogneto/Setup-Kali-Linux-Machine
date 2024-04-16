@@ -34,4 +34,5 @@ Packages:
 - Golang
 - gccGo
 - Ngrok
+- Feroxbuster
 
